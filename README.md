@@ -12,7 +12,7 @@ Please install the ```dbt-sqlserver``` package as well. You will also need the S
 
 In the ```etc``` folder you will find a ```sql-odbc-18.sh``` shell script that you can place in your Databricks workspace that will take care of installing the SQL Server driver on your cluster.
 
-Finally, set your environemnt variables on your Databricks cluster. You should never put plain text secrets in your cluster configurations; use the Databricks Secret Scopes (https://learn.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes) instead.
+Finally, set your environemnt variables on your Databricks cluster. You should never put plain text secrets in your cluster configurations; use the Databricks Secret Scopes () instead.
 
 
 ### Running this project
@@ -41,6 +41,16 @@ $ dbt run
 8. Test the output of the models:
 ```bash
 $ dbt test
+```
+
+9. Generate documentation for the project:
+```bash
+$ dbt docs generate
+```
+
+10. View the documentation for the project:
+```bash
+$ dbt docs serve
 ```
 
 ---
