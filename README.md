@@ -18,7 +18,7 @@ To get up and running with this project:
 
 3. Change into the `dbt_databricks_demo` directory from the command line:
 ```bash
-$ dbt_databricks_demo
+$ cd dbt_databricks_demo
 ```
 
 4. Modify the ```profiles.yml``` file as needed, and set your environment variables.
