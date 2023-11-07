@@ -43,16 +43,6 @@ $ dbt run
 $ dbt test
 ```
 
-9. Generate documentation for the project:
-```bash
-$ dbt docs generate
-```
-
-10. View the documentation for the project:
-```bash
-$ dbt docs serve
-```
-
 ---
 For more information on dbt:
 - Read the [introduction to dbt](https://docs.getdbt.com/docs/introduction).
