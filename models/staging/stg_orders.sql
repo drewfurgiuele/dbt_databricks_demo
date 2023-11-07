@@ -1,3 +1,9 @@
+{{
+    config(
+        as_columnstore=false
+        )
+}}
+
 with source as (
 
     select * from SalesLT.SalesOrderHeader

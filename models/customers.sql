@@ -1,3 +1,9 @@
+{{
+    config(
+        as_columnstore=false
+        )
+}}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}

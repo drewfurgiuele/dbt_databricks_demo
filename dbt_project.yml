@@ -6,16 +6,16 @@ version: '0.1'
 profile: 'dbt_databricks_demo'
 
 model-paths: ["models"]
-seed-paths: ["seeds"]
-test-paths: ["tests"]
-analysis-paths: ["analysis"]
-macro-paths: ["macros"]
 
 target-path: "target"
 clean-targets:
     - "target"
     - "dbt_modules"
     - "logs"
+
+tests:
+  dbt_databricks_demo:
+    +as_columnstore: False
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
@@ -25,3 +25,4 @@ models:
       as_columnstore: False
       staging:
         materialized: view
+        as_columnstore: False
