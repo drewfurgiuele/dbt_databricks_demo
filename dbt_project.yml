@@ -22,5 +22,6 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 models:
   dbt_databricks_demo:
       materialized: table
+      as_columnstore: False
       staging:
         materialized: view
