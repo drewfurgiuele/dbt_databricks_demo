@@ -2,7 +2,13 @@
 
 ### What is this repo?
 
+This is a demo highlighting how a dbt workflow can be used inside of Databricks, even if none of the sources or destinations are a Databricks endpoint.
+
 ### What's in this repo?
+
+At it's core, this is a dbt project. The "models" directory contains the staging and final models that will be deployed. The "dbt_project.yml" and "profiles.yml" files are setup to read and write to a Microsoft/Azure SQL Server and are set to use environment variables. Please set these variables before runniing the project.
+
+Note: Please install the ```dbt-sqlserver``` package as well. You will also need the SQL Server 18 ODBC Driver (https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16)
 
 ### Running this project
 To get up and running with this project:
@@ -10,12 +16,12 @@ To get up and running with this project:
 
 2. Clone this repository.
 
-3. Change into the `jaffle_shop` directory from the command line:
+3. Change into the `dbt_databricks_demo` directory from the command line:
 ```bash
-$ cd jaffle_shop
+$ dbt_databricks_demo
 ```
 
-4. Set up a profile called `jaffle_shop` to connect to a data warehouse by following [these instructions](https://docs.getdbt.com/docs/configure-your-profile). If you have access to a data warehouse, you can use those credentials – we recommend setting your [target schema](https://docs.getdbt.com/docs/configure-your-profile#section-populating-your-profile) to be a new schema (dbt will create the schema for you, as long as you have the right privileges). If you don't have access to an existing data warehouse, you can also setup a local postgres database and connect to it in your profile.
+4. Modify the ```profiles.yml``` file as needed, and set your environment variables.
 
 5. Ensure your profile is setup correctly from the command line:
 ```bash
